@@ -13,11 +13,14 @@
   </div>
 </template>
 <script>
+import myMixin from "@/assets/mixin.js";
 export default {
+  mixins: [myMixin],
   data() {
     return {};
   },
   mounted() {
+    console.log(this.mixinNum)
     /**
      *$on方法为叠加使用，需使用$off方法先解绑事件。
      *$off可以写成数组形式

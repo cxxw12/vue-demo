@@ -50,6 +50,7 @@
 <script>
 	// @ is an alias to /src
 	import HelloWorld from "@/components/HelloWorld.vue";
+	import myMixin from "@/assets/mixin.js";
 	import {
 		mapState
 	} from "vuex";
@@ -63,6 +64,7 @@
 
 	export default {
 		name: "Home",
+		mixins: [myMixin],
 		components: {
 			HelloWorld,
 		},
@@ -181,6 +183,8 @@
 					ele.data = new Number(ele.data).toLocaleString();
 				})
 			})
+			this.mixinNum++;
+			console.log(this.mixinNum)
 		},
 
 		methods: {
