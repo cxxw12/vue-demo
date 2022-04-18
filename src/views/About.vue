@@ -22,6 +22,9 @@
           </el-option>
         </el-select>
       </el-form-item>
+      <el-form-item label="自定义指令">
+        <el-input v-focus></el-input>
+      </el-form-item>
      </el-form>
   </div>
 </template>
@@ -29,6 +32,14 @@
 import myMixin from "@/assets/mixin.js";
 export default {
   mixins: [myMixin],
+  directives: {
+    focus: {
+      inserted: function (el) {
+        console.log(el)
+        el.focus()
+      }
+    }
+  },
   data() {
     return {
       form:{
