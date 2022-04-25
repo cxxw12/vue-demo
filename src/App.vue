@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/date">date</router-link>  |
       <router-link to="/dateNew">dateNew</router-link>
+      <router-link to="/view">view</router-link>
     </div>
     <router-view/>
   </div>

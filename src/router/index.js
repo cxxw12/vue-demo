@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+// import view from '../views/view.vue'
 
 Vue.use(VueRouter)
 
@@ -27,15 +28,24 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/date.vue')
     },
-		{
-		    path: '/dateNew',
-		    name: 'DateNew',
-		    // route level code-splitting
-		    // this generates a separate chunk (about.[hash].js) for this route
-		    // which is lazy-loaded when the route is visited.
-		    component: () =>
-		        import ( /* webpackChunkName: "about" */ '../views/dateNew.vue')
-		}
+    {
+        path: '/dateNew',
+        name: 'DateNew',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/dateNew.vue')
+    },
+    {
+        path: '/view',
+        name: 'View',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/view.vue')
+    }
 ]
 
 const router = new VueRouter({
