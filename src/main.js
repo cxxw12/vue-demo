@@ -10,8 +10,10 @@ import axios from 'axios'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import htmlToPdf from '@/util/htmlToPdf'
+import vueEsign from 'vue-esign'
+Vue.use(vueEsign)
 Vue.use(htmlToPdf)
-// import Plugin from 'v-fit-columns';
+    // import Plugin from 'v-fit-columns';
 Vue.prototype.$moment = moment;
 Vue.config.devtools = true;
 // Vue.use(Plugin);
